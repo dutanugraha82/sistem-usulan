@@ -2,7 +2,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-    <h3>Data Barang</h3>
+    <h3>Data Penjualan</h3>
       <div class="card-tools">
         <div class="input-group input-group-sm" style="width: 150px;">
         </div>
@@ -14,18 +14,21 @@
         <thead>
           <tr>
             <th>Nama Barang</th>
-            <th>Jenis Barang</th>
-            <th>Tanggal</th>
-            <th>Aksi</th>
+            <th>Jumlah</th>
+            <th>Tanggal Penjualan</th>
+            <th>Nominal</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>183</td>
-            <td>John Doe</td>
-            <td>11-7-2014</td>
-            <td><span class="tag tag-success">Approved</span></td>
-          </tr>
+            @foreach ($penjualan as $item)
+            <tr>
+                <td>{{ $item->barang }}</td>
+                <td>{{ $item->jumlah }}</td>
+                <td>{{ $item->tanggal }}</td>
+                <td>Rp {{ $item->total }}</td>
+              </tr>
+            @endforeach
+          
         </tbody>
       </table>
     </div>

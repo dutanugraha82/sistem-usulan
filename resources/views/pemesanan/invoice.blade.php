@@ -16,23 +16,26 @@
               <div class="card-header text-center">
                   <h4>Invoice</h4>
               </div>
+              {{-- @foreach ($pesanan as $item) --}}
               <div class="card-body">
-                <h5 class="mb-4">Nama Pemesan : </h5>
+                <h5 class="mb-4">Nama Pemesan : {{ $pesanan->nama }} </h5>
                 <hr style="height: 3px">
-                <h5 class="mb-4">Alamat : </h5>
+                <h5 class="mb-4">Alamat : {{ $pesanan->alamat }}</h5>
                 <hr style="height: 3px">
-                <h5 class="mb-4">Nama Barang : </h5>
+                <h5 class="mb-4">Nama Barang : {{ $pesanan->barang }}</h5>
                 <hr style="height: 3px">
-                <h5 class="mb-4">Status Pemesanan : </h5>
+                <h5 class="mb-4">Status Pemesanan : {{ $pesanan->status }}</h5>
                 <hr style="height: 3px">
-                <h5 class="mb-4">Jumlah Barang : </h5>
+                <h5 class="mb-4">Jumlah Barang : {{ $pesanan->jumlah }}</h5>
                 <hr style="height: 3px">
-                <h5>Total Harga : </h5>
+                <h5>Total Harga : Rp {{ $pesanan->total }}</h5>
 
               </div>
               <div class="card-footer">
-                  Tanggal : 
+                  Tanggal : {{ $pesanan->tanggal }}
               </div>
+              {{-- @endforeach --}}
+             
           </div>
       </div>
       <div class="container mt-4 text-center">

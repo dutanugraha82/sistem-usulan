@@ -22,22 +22,26 @@
           </tr>
         </thead>
         <tbody>
+          @foreach ($pesanan as $item)
           <tr>
-            <td>183</td>
-            <td>John Doe</td>
-            <td>11-7-2014</td>
-            <td><span class="tag tag-success">Preorder</span></td>
+            <td>{{ $item->nama }}</td>
+            <td>{{ $item->alamat }}</td>
+            <td>{{ $item->tanggal }}</td>
+            <td>{{ $item->status }}</td>
             <td>
-              <form action="#">
+              <form action="/pesanan/{{ $item->id }}" method="POST">
                 @csrf
-                <a href="#" class="btn btn-warning">Edit</a>
+                @method('delete')
+                <a href="/pesanan/{{ $item->id }}/edit" class="btn btn-warning">Edit</a>
                 <input type="submit" class="btn btn-danger" value="Delete">
               </form>
             </td>
             <td>
-                <a href="/invoice" class="btn btn-primary">Invoice</a>
+                <a href="/invoice/{{ $item->id }}" class="btn btn-primary">Invoice</a>
             </td>
           </tr>
+          @endforeach
+          
         </tbody>
       </table>
     </div>

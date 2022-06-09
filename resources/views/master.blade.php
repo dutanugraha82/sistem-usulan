@@ -57,7 +57,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/data-barang" class="nav-link">
+                <a href="/" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Barang</p>
                 </a>
@@ -105,16 +105,32 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/laporan" class="nav-link">
+                <a href="/laporan-barang-masuk" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Laporan</p>
+                  <p>Laporan Barang Masuk</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/laporan-barang-keluar" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Laporan Barang Keluar</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/laporan-penjualan" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Laporan Penjualan</p>
                 </a>
               </li>
             </ul>
           </li>
           {{-- Pembukuan End --}}
           <li class="mx-auto mt-3">
-            <a href="#" class="btn btn-warning text-dark text-center" style="width: 200px"><b>Logout</b></a>
+            <a href="/logout" class="btn btn-warning text-dark text-center" style="width: 200px"><b>Logout</b></a>
         </li>
         </ul>
       </nav>
