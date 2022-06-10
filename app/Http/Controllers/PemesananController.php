@@ -14,7 +14,8 @@ class PemesananController extends Controller
 
     public function invoice($id){
         $pesanan = DB::table('pesanan')->where('id',$id)->first();
-        return view('pemesanan.invoice', compact('pesanan'));
+        // dd($pesanan);
+        return view('pemesanan.invoice2', compact('pesanan'));
     }
 
     public function input(){
